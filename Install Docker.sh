@@ -1,8 +1,9 @@
-#! /bin/bash
+#!/bin/bash
 
-sudo apt update
+sudo apt update -y
 sudo apt install docker.io -y
+sudo systemctl enable --now docker
 sudo usermod -aG docker jenkins
 sudo usermod -aG docker ubuntu
-sudo systemctl restart docker
-sudo chmod 777 /var/run/docker.sock
+sudo chmod 666 /var/run/docker.sock
+docker --version
