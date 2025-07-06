@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Install unzip if not already present (optional, just in case)
+sudo apt-get update
+sudo apt-get install -y unzip
+
 # Download AWS CLI v2
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
@@ -14,3 +18,4 @@ rm -rf aws awscliv2.zip
 
 # Verify installation
 aws --version
+
