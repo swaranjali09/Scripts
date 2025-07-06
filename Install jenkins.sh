@@ -5,7 +5,7 @@
 sudo apt update -y
 
 # Install Java (OpenJDK 11)
-sudo apt install openjdk-11-jre -y
+sudo apt install openjdk-17-jdk -y
 java --version
 
 # Add Jenkins repository and key
